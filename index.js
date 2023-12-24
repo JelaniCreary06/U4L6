@@ -8,11 +8,11 @@ const path = require('path');
 app.use("/public/", express.static(__dirname + '/public'));
 
 app.get('/', (req, res) => {
-    res.sendFile(path.join('/index.html'));
+    res.sendFile(path.join(__dirname + '/index.html'));
 });
 
 app.get('/secondPage', (req, res) => {
-    res.sendFile(path.join(__dirname + '/secondPage.html'))
+    res.sendFile(path.join(__dirname + '/public/view/secondPage.html'))
 });
 
 console.log('Server is running on port ' + port)
